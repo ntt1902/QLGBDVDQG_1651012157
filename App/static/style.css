@@ -1,0 +1,2491 @@
+/*--------------------*/
+/* BASIC TYPOGRAPHY */
+/*--------------------*/
+
+body,
+html {
+	overflow-x:hidden;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+	line-height: 1.5;
+	color: #1c1b1b;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	list-style: disc;
+	font-size: 17px;
+	line-height: 1.59;
+}
+
+a { 
+	text-decoration: none;
+	color: #2f2f2f;  
+}
+
+a:hover,
+a:focus {
+	outline: none;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	margin-top: 0;
+}
+
+
+h1 {
+	font-size: 38px;
+}
+
+h2 {  
+	font-size: 32px; 
+	line-height: 1.13; 
+}
+
+h3 {  
+	font-size: 26px;  
+}
+
+h4 {  
+	font-size: 22px;  
+}
+
+h5 {  
+	font-size: 20px;  
+}
+
+h6 {  
+	font-size: 18px;  
+}
+
+img {
+	border: none;
+	max-width: 100%;
+}
+
+strong {
+	font-weight: 500;
+}
+
+code {
+	background-color: #ee6e73;
+	border-radius: 2px;
+	color: #fff;
+	padding: 2px 4px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #eee;
+	border-radius: 4px;
+	padding: 10px;
+}
+
+pre code {
+	background-color: transparent;
+	color: #333;
+}
+
+del{
+	text-decoration-color: #ee6e73;
+}
+
+kbd {
+	background-color: #ddd;
+	padding: 4px 6px;
+	border-radius: 2px;
+	color: ;
+}
+
+address {
+	line-height: 1.5;
+	padding-left: 10px;
+}
+
+dl dt {
+	font-weight: 700;
+}
+
+dl dd {
+	margin-left: 0;
+}
+
+blockquote {
+	background-color: #f8f8f8;
+	border-radius: 0 4px 4px 0;
+	padding: 5px 15px;
+	
+}
+
+blockquote p {
+	margin-top: 10px;
+}
+
+button {
+	padding: 5px 15px;
+	border: none;
+}
+
+button:focus {
+	outline: none;
+	border: none;
+}
+
+section > div.container {
+    width: 85%;
+    margin-bottom: 50px;
+}
+
+/*Wordpress default class*/
+
+.alignleft {
+	float:left;
+	margin-right:8px;
+}
+
+.aligncenter {
+	display:block;
+	margin:10px auto;
+}
+
+.alignright {
+	float:right;
+	margin-left:8px;
+}		
+
+.alignnone {
+	max-width: 100%;
+}
+
+.wp-caption-text {
+	font-size: 12px;
+	font-style: italic;
+	text-align: center;
+}
+
+/* ========= BUTTON =========*/
+
+.mu-primary-btn {
+	background-color: transparent;
+	border-radius: 100px;
+	border: solid 1px #ffffff;
+	color: #fff;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 01px;
+	padding: 12px 25px;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.mu-primary-btn:hover,
+.mu-primary-btn:focus {
+	background-color: #fff;
+	color: #000;
+}
+.mu-send-msg-btn {
+	border-radius: 4px;
+	border: 1px solid #888;
+	background-color: transparent;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-align: center;
+	padding: 14px 24px;
+	margin-top: 10px;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	width: 130px;
+}
+
+.mu-send-msg-btn:hover,
+.mu-send-msg-btn:focus {
+	background-color: #fff;
+}
+
+
+/*--------------------*/
+/* HEADER */
+/*--------------------*/
+
+#mu-header {
+	display: inline;
+	float: left;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	padding: 25px 0;
+	z-index: 999;
+	transition: all 0.5s;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	color: #fff;
+	font-size: 35px;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: -5px;
+}
+
+.navbar-brand img{
+	margin-top: -12px;
+}
+
+#mu-header.mu-fixed-nav{
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	position: fixed;
+	padding: 15px 0;
+}
+
+
+/*--------------------*/
+/* MENU */
+/*--------------------*/
+
+.navbar-default {
+	min-height: auto;
+}
+
+.mu-navbar {
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
+.navbar-default .mu-menu li a {
+	border-bottom: 2px solid transparent;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 400;
+	padding: 0 0 5px;
+	margin: 10px 15px 5px;
+	transition: all 0.5s;
+}
+
+.navbar-default .mu-menu li a:hover,
+.navbar-default .mu-menu li a:focus {
+	border-bottom: 2px solid #ffffff;
+	color: #fff;
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:focus, 
+.navbar-default .navbar-nav > .active > a:hover{
+	background-color: transparent;
+	color: #fff;
+}
+
+
+/*--------------------*/
+/* USER NAVIGATION */
+/*--------------------*/
+
+.navigation-user {
+    position: relative;
+}
+
+.navigation-user ul {
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    display: block;
+}
+
+.navigation-user ul li {
+    list-style: none;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.navigation-user:hover ul {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.navigation-user ul li a {
+    font-size: 13px !important;
+}
+
+
+/*--------------------*/
+/* FEATURED SLIDER */
+/*--------------------*/
+
+#mu-featured-slider{
+	display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-featured-slider-area{
+	display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-featured-slide {
+	display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-featured-slider-single {
+	display: inline;
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.mu-featured-slider-single::before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	opacity: 0.92;
+}
+
+.mu-featured-slider-content {
+	position: absolute;
+	left: 20%;
+	right: 20%;
+	bottom: 0;
+	top: 35%;
+	text-align: center;
+}
+
+.mu-featured-slider-content h1 {
+	color: #fff;
+	font-size: 50px;
+	margin-bottom: 20px;
+	margin-top: 50px;
+}
+
+.mu-featured-slider-content p {
+	color: #fff;
+	padding: 0 100px;
+	margin-bottom: 20px;
+}
+
+.mu-featured-slider-content .mu-primary-btn{
+	margin-top: 20px;
+}
+
+.slick-dotted.slick-slider{
+	margin-bottom: 0;
+}
+
+.slick-dots {
+	background-color: transparent;
+	bottom: 40px;
+}
+
+.slick-dots li button {
+	background-color: #fff;
+	border-radius: 10px;
+	-webkit-transform: scale(1);
+	        transform: scale(1);
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	opacity: 0.5;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	height: 18px;
+	width: 18px;
+
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus,
+.slick-dots li.slick-active button {
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+
+.slick-dots li button::before,
+.slick-dots li.slick-active button::before {
+	color: #fff;
+	height: 18px;
+	width: 18px;
+}
+
+
+/*--------------------*/
+/* TYPE COMPETITION */
+/*--------------------*/
+
+#mu-type-competition {
+	display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-type-competition-area {
+	display: inline;
+	float: left;
+	padding: 100px 0;
+	width: 100%;
+}
+
+.mu-type-competition-header {
+	display: inline;
+	float: left;
+	text-align: center;
+	width: 100%;
+}
+
+.mu-heading-title {
+	color: #1c1b1b;
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.mu-header-dot {
+	background-color: #7d7373;
+	border-radius: 0;
+	height: 3px;
+	width: 100px;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.mu-type-competition-content{
+	display: inline;
+	float: left;
+	margin: 0 auto;
+	margin-top: 70px;
+	width: 100%;
+}
+
+.mu-type-competition-content-single{
+	display: inline;
+	float: left;
+	text-align: center;
+	width: 100%;
+}
+
+.mu-type-competition-icon-box {
+	font-size: 25px;
+	padding: 5px 12px;
+	margin-bottom: 30px;
+	display: inline-block;
+	border: 1px solid #3fc35f;
+	color: #3fc35f;
+	border-radius: 10px;
+}
+
+.mu-type-competition-content-single h4{
+	margin-bottom: 20px;
+	color: #3fc35f;
+}
+
+
+/*--------------------*/
+/* LOGIN */
+/*--------------------*/
+
+#mu-login {
+	display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-login-area {
+	display: inline;
+	float: left;
+	padding: 100px 0;
+	width: 100%;
+	margin-top: 100px;
+}
+
+.mu-login-form {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 5px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.mu-login-form-header {
+    margin-bottom: 50px;
+}
+
+.mu-login-form-header h1 {
+    text-align: center;
+}
+
+.mu-login-form-body {
+    margin-bottom: 20px;
+}
+
+.mu-login-form-body-button {
+    margin-top: 30px;
+}
+
+.mu-login-form-body-button > button {
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    transition: .5s;
+}
+
+.mu-login-form-body-button > button:hover {
+    background-color: #3fc35f;
+}
+
+.mu-login-form-footer {
+    margin-top: 30px;
+    padding: 10px;
+    padding-top: 20px;
+    border-top: 1px solid black;
+}
+
+.mu-login-form-footer a {
+    color: #3fc35f;
+    border-bottom: 1px solid #3fc35f;
+}
+
+
+/*--------------------*/
+/* LEAGUES */
+/*--------------------*/
+
+#mu-leagues {
+	display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-search-leagues-area {
+	display: inline;
+	float: left;
+	padding-top: 100px;
+	width: 100%;
+}
+
+.mu-search-leagues-form input {
+    width: 85% !important;
+}
+
+.mu-search-leagues-btn {
+    background-color: #3fc35f;
+    border-radius: 5px;
+    color: white;
+}
+
+.mu-search-leagues-btn:hover {
+    color: white;
+}
+
+.mu-leagues-area {
+	display: inline;
+	float: left;
+    padding-top: 50px;
+    padding-bottom: 50px;
+	width: 100%;
+}
+
+.mu-leagues-group-card {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mu-leagues-card {
+    flex-basis: 20%;
+    border: 1px solid #3fc35f;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 15px;
+    margin-bottom: 30px;
+    transition: .2s;
+}
+
+.mu-leagues-card:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.mu-leagues-card img {
+    width: 100%;
+}
+
+.mu-leagues-card-image {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 25%;
+    transform: translate(0%, -50%);
+}
+
+.mu-leagues-card-image img {
+    border: 1px solid #3fc35f;
+    border-radius: 5px;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.mu-leagues-card-body {
+    margin-top: -25px;
+}
+
+.mu-leagues-card-body h4 {
+    margin-top: 10px;
+    color: #3fc35f;
+}
+
+.mu-leagues-card-body p {
+    margin-top: 10px;
+}
+
+
+/*--------------------*/
+/* CLUBS */
+/*--------------------*/
+
+#mu-clubs {
+	display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-search-club-area {
+	display: inline;
+	float: left;
+	padding-top: 100px;
+	width: 100%;
+}
+
+.mu-search-club-form input {
+    width: 85% !important;
+}
+
+.mu-search-club-btn {
+    background-color: #3fc35f;
+    border-radius: 5px;
+    color: white;
+}
+
+.mu-search-club-btn:hover {
+    color: #fff;
+}
+
+.mu-clubs-area {
+	display: inline;
+	float: left;
+    padding-top: 50px;
+    padding-bottom: 50px;
+	width: 100%;
+}
+
+.mu-clubs-group-card {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mu-clubs-card {
+    flex-basis: 17%;
+    border: 1px solid #3fc35f;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 15px;
+    transition: .2s;
+}
+
+.mu-clubs-card:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.mu-clubs-card img {
+    margin-bottom: 10px;
+    width: 50%;
+    transform: translate(50%, 0%);
+}
+
+.mu-clubs-card h4 {
+    margin-top: 10px;
+    color: #3fc35f;
+}
+
+.mu-clubs-card p {
+    margin-top: 10px;
+}
+
+
+/*--------------------*/
+/* PROFILE */
+/*--------------------*/
+
+#mu-profile {
+    display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-profile-area {
+    display: inline;
+	float: left;
+	padding-top: 150px;
+	width: 100%;
+}
+
+.mu-profile-area h2 {
+    color: #3fc35f;
+    margin-bottom: 50px;
+}
+
+.mu-profile-content {
+    display: flex;
+    padding: 20px;
+    border: 1px solid #3fc35f;
+}
+
+.mu-profile-image {
+    flex-basis: 30%;
+}
+
+.mu-profile-image img {
+    border: 1px solid #3fc35f;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.mu-profile-form {
+    flex-basis: 60%;
+}
+
+.mu-profile-form button {
+    background-color: #3fc35f;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/*--------------------*/
+/* MY CLUB */
+/*--------------------*/
+
+#mu-my-club {
+    display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-my-club-area {
+    display: inline;
+	float: left;
+	padding-top: 150px;
+	width: 100%;
+}
+
+.mu-my-club-area a {
+    padding: 10px;
+}
+
+.mu-my-club-area h2 {
+    color: #3fc35f;
+    margin-bottom: 50px;
+}
+
+.mu-no-clubs-area {
+    margin-top: 50px;
+    padding: 10px;
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+    border-radius: 5px;
+}
+
+.mu-no-clubs-area h5 {
+    margin: 0;
+}
+
+
+/*--------------------*/
+/* MY LEAGUE */
+/*--------------------*/
+
+#mu-my-league {
+    display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-my-league-area {
+    display: inline;
+	float: left;
+	padding-top: 150px;
+	width: 100%;
+}
+
+.mu-my-league-area h2 {
+    color: #3fc35f;
+    margin-bottom: 50px;
+}
+
+.mu-my-league-area a {
+    padding: 10px;
+}
+
+.mu-no-leagues-area {
+    margin-top: 50px;
+    padding: 10px;
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+    border-radius: 5px;
+}
+
+.mu-no-leagues-area h5 {
+    margin: 0;
+}
+
+
+/*--------------------*/
+/* CREATE CLUB */
+/*--------------------*/
+
+#mu-create-club {
+    display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-create-club-area {
+    display: inline;
+	float: left;
+	padding-top: 150px;
+	width: 100%;
+}
+
+.mu-create-club-area h2 {
+    color: #3fc35f;
+    margin-bottom: 15px;
+}
+
+.mu-create-club-content {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #2F323A;
+    padding: 10px;
+}
+
+.mu-create-club-image {
+    flex-basis: 30%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #3fc35f;
+}
+
+.mu-create-club-image > img {
+    display: block;
+    margin: 0 auto;
+}
+
+.mu-create-club-form-body {
+    flex-basis: 60%;
+}
+
+.mu-create-club-form-body button {
+    padding: 10px;
+    margin-top: 5px;
+    color: white;
+    background-color: #3fc35f;
+    border-radius: 5px;
+}
+
+
+/*--------------------*/
+/* CREATE LEAGUE */
+/*--------------------*/
+
+#mu-create-league {
+    display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-create-league-area {
+    display: inline;
+	float: left;
+	padding-top: 150px;
+	width: 100%;
+}
+
+.mu-create-league-area h2 {
+    color: #3fc35f;
+    margin-bottom: 15px;
+}
+
+.mu-create-league-content {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.mu-create-league-image {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #3fc35f;
+}
+
+.mu-create-league-image > img {
+    margin: 0 auto;
+    display: block;
+}
+
+.mu-create-league-form-body {
+    flex-basis: 60%;
+}
+
+.mu-create-league-form-body button {
+    padding: 10px;
+    margin-top: 5px;
+    color: white;
+    background-color: #3fc35f;
+    border-radius: 5px;
+}
+
+.mu-create-league-point {
+    display: flex;
+}
+
+.mu-create-league-point div {
+    flex-basis: 33%;
+    margin-right: 5px;
+}
+
+
+/*--------------------*/
+/* CREATE PLAYER */
+/*--------------------*/
+
+#mu-create-player {
+    display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-create-player-area {
+    display: inline;
+	float: left;
+	padding-top: 150px;
+	width: 100%;
+}
+
+.mu-create-player-area h2 {
+    color: #3fc35f;
+    margin-bottom: 15px;
+}
+
+.mu-create-player-content {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #2F323A;
+    padding: 10px;
+}
+
+.mu-create-player-image {
+    flex-basis: 30%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #3fc35f;
+}
+
+.mu-create-player-image > img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.mu-create-player-form-body {
+    flex-basis: 60%;
+}
+
+.mu-create-player-form-body button {
+    padding: 10px;
+    margin-top: 5px;
+    color: white;
+    background-color: #3fc35f;
+    border-radius: 5px;
+}
+
+
+/*--------------------*/
+/* SIDEBAR */
+/*--------------------*/
+
+#sidebar {
+    flex-basis: 25%;
+    background-color: #2F323A;
+}
+
+#sidebar a {
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+#sidebar a:hover {
+    background: #fff;
+    color: black;
+}
+
+#sidebar i {
+    padding-right: 10px;
+}
+
+
+/*--------------------*/
+/* CLUB DETAIL */
+/*--------------------*/
+
+#mu-club-detail {
+    display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-club-detail-area {
+    display: inline;
+	float: left;
+	padding-top: 150px;
+	width: 100%;
+}
+
+.mu-club-detail-content {
+    display: flex;
+    border: 2px solid #2F323A;
+}
+
+.mu-club-detail-body {
+    flex-basis: 100%;
+    padding: 20px;
+}
+
+.mu-club-detail-body h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mu-club-detail-image {
+    margin-bottom: 20px;
+    border: 1px solid #3fc35f;
+}
+
+.mu-club-detail-image img {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+}
+
+/*--------------------*/
+/* PLAYERS */
+/*--------------------*/
+
+#mu-players {
+    display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-players-area {
+    display: inline;
+	float: left;
+	padding-top: 150px;
+	width: 100%;
+}
+
+.mu-players-content {
+    display: flex;
+    border: 2px solid #2F323A;
+}
+
+.mu-players-content h4 {
+    text-align: center;
+    margin: 20px;
+}
+
+.mu-players-body {
+    flex-basis: 100%;
+    padding: 20px;
+}
+
+.mu-players-body a {
+    margin-bottom: 20px;
+}
+
+.mu-players-body table thead {
+    background-color: #cccccc;
+}
+
+.mu-players-body table th, tr, td {
+    text-align: center;
+}
+
+.mu-players-body table tbody tr:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.mu-players-body table a {
+    color: #fff;
+    background-color: #3fc35f;
+    border-radius: 5px;
+}
+
+
+/*--------------------*/
+/* LEAGUE CLUB */
+/*--------------------*/
+
+#mu-leagues-club {
+    display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-leagues-club-area {
+    display: inline;
+	float: left;
+	padding-top: 150px;
+	width: 100%;
+}
+
+.mu-leagues-club-content {
+    display: flex;
+    border: 2px solid #2F323A;
+}
+
+.mu-leagues-club-body {
+    flex-basis: 100%;
+}
+
+.mu-leagues-club-body h4 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mu-leagues-club-group-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mu-leagues-club-card {
+    flex-basis: 20%;
+    padding: 10px;
+    margin: 20px 10px;
+    border: 1px solid #3fc35f;
+    border-radius: 5%;
+}
+
+.mu-leagues-club-card-body h5 {
+    color: #3fc35f;
+    text-align: center;
+    margin: 10px;
+}
+
+.mu-leagues-club-card-body p {
+    text-align: center;
+}
+
+
+/*--------------------*/
+/* ACHIEVEMENTS */
+/*--------------------*/
+
+#mu-achievements {
+    display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-achievements-area {
+    display: inline;
+	float: left;
+	padding-top: 150px;
+	width: 100%;
+}
+
+.mu-achievements-content {
+    display: flex;
+    border: 2px solid #2F323A;
+}
+
+.mu-achievements-body {
+    flex-basis: 75%;
+    margin: 20px;
+}
+
+.mu-achievements-body h4 {
+    margin: 20px;
+    text-align: center;
+}
+
+.mu-achievements-body-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.mu-achievements-match, .mu-achievements-goal {
+    border: 1px solid #3fc35f;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.mu-achievements-match-header h5, .mu-achievements-goal-header h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.mu-achievements-match-header, .mu-achievements-goal-header {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    background-color: #3fc35f;
+    text-transform: uppercase;
+}
+
+.mu-achievements-match-body, .mu-achievements-goal-body {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.mu-achievements-match-body div, .mu-achievements-goal-body div {
+    flex-basis: 25%;
+}
+
+.mu-achievements-match-body div p, h3, .mu-achievements-goal-body div p, h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/*--------------------*/
+/* LEAGUE DETAIL */
+/*--------------------*/
+#mu-league-detail {
+    display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-league-detail-area {
+    display: inline;
+	float: left;
+	padding-top: 150px;
+	width: 100%;
+}
+
+.mu-league-detail-content-header {
+    display: flex;
+    color: #fff;
+    padding: 20px 0;
+    background-color: #2F323A;
+    border-bottom: 2px solid #fff;
+}
+
+.mu-league-detail-content-header-image {
+    flex-basis: 20%;
+    padding: 5px;
+}
+
+.mu-league-detail-content-header-image img {
+    width: 35%;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #3fc35f;
+    border-radius: 5%;
+}
+
+.mu-league-detail-content-body {
+    display: flex;
+    border: 2px solid #2F323A;
+}
+
+.mu-league-detail-body {
+    flex-basis: 75%;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.mu-league-detail-body table thead {
+    background-color: #cccccc;
+}
+
+.mu-league-detail-body table th, tr, td {
+    text-align: center;
+}
+
+.mu-league-detail-body .status-primary {
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+
+.mu-league-detail-body .status-success {
+    color: green;
+    border-bottom: 1px solid green;
+}
+
+.mu-league-detail-body .status-danger {
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+
+/*--------------------*/
+/* RANK */
+/*--------------------*/
+#rank thead {
+    background-color: #cccccc;
+}
+
+#rank th, tr, td {
+    text-align: center;
+}
+
+#rank tbody tr:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+#rank .tooltip {
+  position: relative;
+}
+
+#rank #tooltip .tooltip-text {
+  visibility: hidden;
+  background-color: #2F323A;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  margin-left: 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+#rank #tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+.badge-win {
+    background-color: #28a745;
+}
+
+.badge-draw {
+    background-color: #6c757d;
+}
+
+.badge-lose {
+    background-color: #dc3545;
+}
+
+/*--------------------*/
+/* CLUB LEAGUE */
+/*--------------------*/
+#clubs-league {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#clubs-league .mu-clubs-league-card {
+    flex-basis: 25%;
+    border: 1px solid #2F323A;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5%;
+}
+
+.mu-clubs-league-card-image {
+    margin-bottom: 10px;
+    border: 1px solid #3fc35f;
+    border-radius: 5%;
+}
+
+.mu-clubs-league-card img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.mu-clubs-league-card-body h5 {
+    color: #3fc35f;
+}
+
+.mu-clubs-league-card-body .badge-group {
+    display: flex;
+    justify-content: center;
+}
+
+/*--------------------*/
+/* REGISTER LEAGUE */
+/*--------------------*/
+.mu-register-league {
+    display: flex;
+    flex-direction: column;
+}
+
+.mu-register-league-text {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.mu-register-league-text span {
+    color: red;
+}
+
+#clock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+#clock div {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #262626;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#clock div span:first-child {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.mu-register-league-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #3fc35f;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.mu-register-league-btn a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+
+/*--------------------*/
+/* SETTINGS */
+/*--------------------*/
+.mu-settings-league-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.mu-settings-league-image {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #3fc35f;
+}
+
+.mu-settings-league-image > img {
+    margin: 0 auto;
+    display: block;
+}
+
+.mu-settings-league-form-body {
+    flex-basis: 60%;
+}
+
+.mu-settings-league-form-body button {
+    padding: 10px;
+    margin-top: 5px;
+    color: white;
+    background-color: #3fc35f;
+    border-radius: 5px;
+}
+
+
+/*--------------------*/
+/* SCHEDULE */
+/*--------------------*/
+.mu-schedule-nav {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.mu-schedule-btn, .mu-schedule-round {
+    margin: 5px;
+}
+
+.mu-schedule-btn {
+    flex-basis: 15%;
+}
+
+.mu-schedule-round {
+    flex-basis: 20%;
+}
+
+.mu-schedule-score {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mu-schedule-score h5, h4 {
+    margin: 0;
+}
+
+.mu-schedule-score-home-name, .mu-schedule-score-away-name {
+    flex-basis: 20%
+
+}
+
+.mu-schedule-score-home-name {
+    margin-right: 10px;
+}
+
+.mu-schedule-score-away-name {
+    margin-left: 10px;
+}
+
+.mu-schedule-score-home, .mu-schedule-score-away {
+    flex-basis: 15%
+
+}
+
+.mu-schedule-score-center {
+    flex-basis: 5%
+
+}
+
+#rounds tr:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+#rounds td {
+    padding: 5px;
+    margin: 0;
+}
+
+#rounds input:focus {
+    border: 1px solid blue;
+}
+
+#rounds .btn-date-match:focus {
+    border: none;
+    outline: none;
+}
+
+#rounds .match-score {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    margin: 0 auto;
+}
+
+#rounds h5 {
+    flex-basis: 5%;
+    margin: 0 5px;
+}
+
+
+/*--------------------*/
+/* MATCH DETAIL */
+/*--------------------*/
+#mu-match-detail {
+    display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-match-detail-area {
+    display: inline;
+	float: left;
+	padding-top: 150px;
+	width: 100%;
+}
+
+.mu-match-detail-content {
+    display: flex;
+    justify-content: center
+}
+
+.mu-match-detail-content-goal {
+    flex-basis: 55%;
+    margin-right: 20px;
+}
+
+.mu-match-detail-content-achievement {
+    flex-basis: 40%;
+}
+
+.mu-match-detail-content-goal,
+.mu-match-detail-content-achievement,
+.mu-match-detail-content-player {
+    border: 1px solid #3fc35f;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.mu-match-detail-content-goal-header h5,
+.mu-match-detail-content-achievement-header h5,
+.mu-match-detail-content-player h5 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.mu-match-detail-content-goal-header,
+.mu-match-detail-content-achievement-header,
+.mu-match-detail-content-player-header {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    background-color: #3fc35f;
+    text-transform: uppercase;
+}
+
+.mu-match-detail-content-goal-body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.mu-match-detail-content-goal div {
+    flex-basis: 30%;
+}
+
+.mu-match-detail-content-achievement-body {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.mu-match-detail-content-achievement-body div {
+    flex-basis: 100%;
+}
+
+.mu-match-detail-content-goal-home, mu-match-detail-content-goal-away {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.mu-match-detail-content-goal-home-image, .mu-match-detail-content-goal-away-image {
+    margin-bottom: 20px;
+}
+
+.mu-match-detail-content-goal-home-image img, .mu-match-detail-content-goal-away-image img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.mu-match-detail-content-goal-home-name, .mu-match-detail-content-goal-away-name {
+    color: #3fc35f;
+}
+
+.mu-match-detail-content-goal-home-away p {
+    font-size: 70px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mu-match-detail-content-achievement-body table {
+    border: 1px solid #cccccc;
+}
+
+.mu-match-detail-content-achievement-body table thead {
+    background-color: #cccccc;
+}
+
+.mu-match-detail-content-achievement-body table th, td {
+    text-align: center;
+}
+
+.mu-match-detail-content-player {
+    display: flex;
+    flex-direction: column;
+    width: 96.5%;
+    margin: 0 auto;
+}
+
+#conference-timeline {
+    position: relative;
+    max-width: 920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/*--------------------*/
+/* TIMELINE */
+/*--------------------*/
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+
+}
+
+.timeline ul li {
+    margin-bottom: 50px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.point {
+    min-width: 20px;
+    height: 20px;
+    background-color: #3fc35f;
+    border-radius: 100%;
+    z-index: 2;
+    border: 3px #333333 solid;
+    position: relative;
+    left: 1px;
+}
+
+.timeline ul li .content {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.timeline-left .content {
+    padding-left: 0;
+}
+
+.timeline-left .date {
+    padding-right: 0;
+}
+
+.timeline-right .content {
+    padding-right: 0;
+}
+
+.timeline-right .date {
+    padding-left: 0;
+}
+
+.timeline ul li .date {
+    width: 50%;
+    padding: 0 20px;
+    font-weight: normal;
+}
+
+.timeline ul li .date h4 {
+    background-color: #3fc35f;
+    width: 100px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #eee;
+}
+
+.timeline ul li .content h5 {
+    padding: 10px 20px;
+    background-color: #cccccc;
+    margin-bottom: 0;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: black;
+}
+
+.timeline ul li .content p {
+    padding: 10px 20px;
+    background-color: #eeeeee;
+    margin-top: 0;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.timeline-right {
+    flex-direction: row-reverse !important;
+}
+
+.timeline-right .date h4 {
+    float: right
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    left: 50%;
+    background-color: #333333;
+}
+
+
+/*--------------------*/
+/* COUNTER */
+/*--------------------*/
+
+#mu-counter {
+	background-image: url("images/football_theme_4.jpg");
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	display: inline;
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+#mu-counter:before {
+	bottom: 0;
+	content: '';
+	left: 0;
+	top: 0;
+	right: 0;
+	position: absolute;
+	opacity: 0.84;
+}
+
+.mu-counter-area {
+	display: inline;
+	float: left;
+	padding: 150px 0;
+	width: 100%;
+}
+
+.mu-counter-area h2 {
+	color: #fff;
+	text-align: center;
+}
+
+.mu-counter-block {
+	display: inline;
+	float: left;
+	margin-top: 80px;
+	width: 100%;
+}
+
+.mu-single-counter {
+	display: inline;
+	float: left;
+	text-align: center;
+	width: 100%;
+}
+
+.mu-single-counter i {
+	color: #fff;
+	font-size: 40px;
+	border-bottom: 3px solid #fff;
+	padding: 15px 15px;
+	margin-bottom: 0px;
+	display: inline-block;
+}
+
+.counter-value {
+	font-size: 40px;
+	font-weight: 700;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #fff;
+}
+
+.mu-counter-name {
+	color: #ecf0f1;
+}
+
+
+/*--------------------*/
+/* TUTORIAL */
+/*--------------------*/
+
+#mu-tutorial {
+	display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-tutorial-area {
+	display: inline;
+	float: left;
+	padding: 100px 0;
+	width: 100%;
+}
+
+.mu-tutorial-header {
+	display: inline;
+	float: left;
+	text-align: center;
+	width: 100%;
+}
+
+.mu-heading-title {
+	color: #1c1b1b;
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.mu-header-dot {
+	background-color: #7d7373;
+	border-radius: 0;
+	height: 3px;
+	width: 100px;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.mu-tutorial-content{
+	display: inline;
+	float: left;
+	margin-top: 70px;
+	width: 100%;
+}
+
+.mu-tutorial-content-single{
+	display: inline;
+	float: left;
+	text-align: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 0 10px;
+	width: 100%;
+}
+
+.mu-tutorial-icon-box {
+    color: #3fc35f;
+	font-size: 35px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	display: inline-block;
+	border-radius: 10px;
+}
+
+.mu-tutorial-sub-icon {
+    margin-bottom: 10px;
+}
+
+.mu-tutorial-sub-icon span {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.mu-tutorial-sub-icon i {
+    color: #3fc35f;
+}
+
+.mu-tutorial-content-single h4{
+    display: inline;
+	margin-left: 10px;
+	font-size: 20px;
+	color: #3fc35f;
+}
+
+.mu-tutorial-content-single p{
+	font-size: 15px;
+}
+
+
+/*--------------------*/
+/* FOOTER */
+/*--------------------*/
+
+#mu-footer{
+    background-image: linear-gradient(to right, #B06AB3, #3fc35f);
+    color: white;
+	display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-footer-area{
+	display: inline;
+	float: left;
+	padding: 30px 0;
+	text-align: center;
+	width: 100%;
+}
+
+/*--------------------*/
+/* RESPONSIVE STYLE */
+/*--------------------*/
+
+@media (max-width: 1199px) {
+	
+	.mu-featured-slider-content {
+		left: 10%;
+		right: 10%;
+		bottom: 0;
+		top: 25%;
+	}
+
+	.navbar-default .navbar-brand,
+	.navbar-default .navbar-brand:hover,
+	.navbar-default .navbar-brand:focus {
+		margin-top: -7px;
+	}
+
+	.navbar-brand img {
+		width: 145px;
+		margin-top: -10px;
+	}
+
+	.navbar-default .mu-menu li a {
+		margin: 10px 12px 5px;
+	}
+
+	.mu-clubs-card {
+	    flex-basis: 20%;
+	}
+
+	#sidebar a {
+        padding-left: 20px;
+	}
+
+	.mu-match-detail-content-goal-home-away p {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+	.navbar-default .mu-menu li a {
+		font-size: 14px;
+		margin: 10px 5px;
+	}
+
+	.navigation-user ul li a {
+        font-size: 14px !important;
+    }
+
+	.mu-featured-slider-content h1 {
+		font-size: 25px;
+		margin-bottom: 10px;
+	}	
+
+	.mu-featured-slider-content p {
+		padding: 0;
+		margin-bottom: 0;
+		font-size: 14px;
+	}
+
+	.mu-primary-btn {
+		font-size: 14px;
+		padding: 12px 22px;
+	}
+
+	.mu-type-competition-content-single,
+	.mu-single-counter {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.mu-search-leagues-area div {
+	    margin-bottom: 10px;
+	}
+
+    .mu-leagues-card {
+        flex-basis: 45%;
+    }
+
+    .mu-search-club-area div {
+	    margin-bottom: 10px;
+	}
+
+    .mu-clubs-card {
+        flex-basis: 43%;
+    }
+
+    .mu-profile-content {
+        flex-direction: column;
+    }
+
+    .mu-profile-image > img {
+        margin-bottom: 50px;
+    }
+
+    .mu-create-club-content {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        flex-basis: 7%;
+    }
+
+    #sidebar a {
+        padding-left: 15px;
+    }
+
+    #sidebar a span {
+        display: none;
+    }
+
+    .mu-leagues-club-card {
+        flex-basis: 45%;
+    }
+
+    .mu-achievements-body {
+        flex-basis: 85%;
+    }
+
+    .mu-league-detail-body {
+        flex-basis: 88%;
+    }
+
+    #clubs-league .mu-clubs-league-card {
+        flex-basis: 40%;
+    }
+
+    .mu-match-detail-content {
+        flex-direction: column;
+    }
+
+    .mu-match-detail-content-goal {
+        margin: 20px 0;
+    }
+}
+
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-toggle {
+		border-color: #fff;
+	}
+
+	.navbar-default .navbar-toggle:hover,
+	.navbar-default .navbar-toggle:focus{
+		background-color: transparent;
+	}
+
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #fff;
+	}
+
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		background-color: rgba(0, 0, 0, 0.8);
+		text-align: center;
+	}
+
+	.navbar-default .mu-menu li a {
+		display: inline-block;
+	}
+
+	.navigation-user ul li a {
+        font-size: 15px !important;
+    }
+
+    .navigation-user ul {
+        background-color: rgba(0, 0, 0, 0);
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        transition: all 0.5s ease;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .mu-search-leagues-area div:first-child input {
+        display: inline !important;
+	}
+
+	.mu-search-club-area div:first-child input {
+        display: inline !important;
+	}
+}
+
+@media (max-width: 640px) {
+
+	#mu-header.mu-fixed-nav {
+		padding: 10px 0;
+	}
+	
+	.mu-featured-slider-content {
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 30%;
+		padding: 0 10px;
+	}
+
+	.mu-featured-slider-content h1 {
+		font-size: 20px;
+		margin-bottom: 5px;
+	}
+
+	.mu-featured-slider-content p {
+		font-size: 12px;
+	}
+
+	.mu-primary-btn {
+		font-size: 12px;
+		padding: 10px 12px;
+		margin-top: 15px;
+	}
+
+	.slick-dots {
+		bottom: 15px;
+	}
+
+	.mu-leagues-card {
+        flex-basis: 90%;
+    }
+
+    .mu-clubs-card {
+        flex-basis: 90%;
+    }
+
+    .mu-leagues-club-card {
+        flex-basis: 90%;
+    }
+
+    .mu-achievements-match-body div, .mu-achievements-goal-body div {
+        flex-basis: 45%;
+    }
+
+    #clubs-league .mu-clubs-league-card {
+        flex-basis: 85%;
+    }
+
+    .mu-schedule-round {
+        flex-basis: 30%;
+    }
+
+    .timeline ul li .content h5 {
+        font-size: 16px;
+    }
+
+    .mu-match-detail-content-goal-home-name h3, .mu-match-detail-content-goal-away-name h3 {
+        font-size: 16px !important;
+    }
+
+    .timeline:before {
+        left: 40%;
+    }
+
+    .timeline-right, .timeline-left {
+        flex-direction: row-reverse !important;
+    }
+
+    .timeline ul li .content {
+        padding: 0;
+    }
+
+    .timeline ul li .point {
+        left: -10%;
+    }
+
+    .timeline ul li .date {
+        float: left;
+        padding: 0 !important;
+    }
+
+    .timeline-right .date h4, .timeline-left .date h4 {
+        float: left;
+    }
+
+    .mu-create-league-point {
+        flex-direction: column;
+    }
+
+    .mu-create-league-point div {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+	#mu-header {
+		padding: 10px 0;
+	}
+
+	.navbar-default .navbar-brand, 
+	.navbar-default .navbar-brand:hover, 
+	.navbar-default .navbar-brand:focus {
+		font-size: 25px;
+		margin-top: 0px;
+	}
+
+	.navbar-toggle {
+		padding: 7px 8px;
+	}
+
+	.navbar-toggle .icon-bar {
+		width: 18px;
+	}
+
+	.mu-featured-slide .slick-dots {
+		display: none !important;
+	}
+
+	.mu-featured-slider-content h1 {
+		font-size: 15px;
+		margin-bottom: 0;
+		margin-top: 20px;
+	}
+
+	h2{
+		font-size: 25px;
+	}
+
+	.mu-heading-title {
+		margin-bottom: 10px;
+	}
+
+	.mu-type-competition-content-single h4 {
+		margin-bottom: 18px;
+	}
+
+    .mu-achievements-body {
+        flex-basis: 80%;
+    }
+
+	.mu-achievements-match-body div, .mu-achievements-goal-body div {
+        flex-basis: 100%;
+    }
+
+    .mu-schedule-btn, .mu-schedule-round {
+        flex-basis: 50%;
+    }
+
+    .mu-schedule-score {
+        flex-direction: column;
+    }
+
+    .mu-schedule-score div {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .mu-match-detail-content-goal-home, .mu-match-detail-content-goal-away {
+        flex-basis: 20%;
+    }
+
+    .mu-match-detail-content-goal-home h3, .mu-match-detail-content-goal-away h3 {
+        font-size: 20px;
+    }
+
+    .mu-match-detail-content-goal-home-away {
+        flex-basis: 30%;
+    }
+
+    .mu-match-detail-content-goal-home-away p {
+        font-size: 35px;
+    }
+
+    .timeline ul li .content h5 {
+        font-size: 12px;
+    }
+
+    .timeline .date h4 {
+        width: 70px !important;
+        font-size: 18px !important;
+    }
+
+    .timeline ul li .content p {
+        display: none;
+    }
+
+    .timeline ul li .content h5 {
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 360px){
+
+	.mu-featured-slider-content {
+		top: 49%;
+	}
+
+	.mu-featured-slider-content p,
+	.mu-featured-slider-content .mu-primary-btn {
+		display: none;
+	}
+
+	.mu-featured-slider-content h1 {
+		font-size: 16px;
+		margin-bottom: 0;
+		margin-top: 10px;
+	}
+
+	.mu-search-leagues-form input {
+        width: 60% !important;
+	}
+
+	.mu-search-club-form input {
+        width: 60% !important;
+	}
+
+	.mu-achievements-body {
+        flex-basis: 70%;
+    }
+
+    .mu-schedule-nav {
+        flex-direction: column;
+    }
+
+    .mu-schedule-btn, .mu-schedule-round {
+        flex-basis: 100%;
+        margin: 5px 0;
+    }
+
+    .timeline:before {
+        left: 39%;
+    }
+
+    .mu-match-detail-content-goal-header h5 {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+

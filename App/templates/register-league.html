@@ -1,0 +1,178 @@
+{% extends "base/base.html" %}
+
+{% block header %}
+    {{ super() }}
+{% endblock %}
+
+{% block style_header %}
+    class="mu-fixed-nav" style="background-color: #3fc35f;"
+{% endblock %}
+
+{% block slider %}
+<section id="mu-league-detail">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-league-detail-area">
+                    <div class="mu-league-detail-content">
+                        <div class="mu-league-detail-content-header">
+                            <div class="mu-league-detail-content-header-image">
+                                <img src="/static/images/default_football_league.png">
+                            </div>
+                            <div class="mu-league-detail-content-header-body">
+                                <h6>{{ league.name }}</h6>
+                                <p>
+                                    {% for city in cities %}
+                                        {% if city.id == league.city_id %}
+                                        <span>{{ league.address }} | {{ city.name }}</span>
+                                        {% endif %}
+                                    {% endfor %}
+                                </p>
+                                <p><i class="icon-people"></i> {{ league.id|get_total_club_of_league }} Đội</p>
+                            </div>
+                        </div>
+                        <div class="mu-league-detail-content-body">
+                            <div id="sidebar">
+                                {% if check_date %}
+                                <a href="{{ url_for('register_league', league_id=league.id) }}"><i class="icon-clock"></i><span>Đăng ký giải đấu</span></a>
+                                {% endif %}
+                                <a href="{{ url_for('schedule', league_id=league.id) }}"><i class="icon-calendar"></i><span>Lịch thi đấu</span></a>
+                                <a href="{{ url_for('rank', league_id=league.id) }}"><i class="icon-trophy"></i><span>Bảng xếp hạng</span></a>
+                                <a href="{{ url_for('clubs_league', league_id=league.id) }}"><i class="icon-people"></i><span>Đội bóng</span></a>
+                                {% if current_user.id == league.user_id %}
+                                <a href="{{ url_for('list_register', league_id=league.id) }}"><i class="icon-list"></i><span>Danh sách đăng ký</span></a>
+                                <a href="{{ url_for('settings', league_id=league.id) }}"><i class="icon-settings"></i><span>Tùy chỉnh</span></a>
+                                {% endif %}
+                                <a href="{{ url_for('rules', league_id=league.id) }}"><i class="icon-note"></i><span>Quy định</span></a>
+                            </div>
+                            <div class="mu-league-detail-body">
+                                <div class="mu-register-league">
+                                    {% if msg %}
+                                    <div class="alert alert-{{ msg.alert_type }}">
+                                        <p class="text-center">{{ msg.content }}</p>
+                                    </div>
+                                    {% endif %}
+                                    <div class="mu-register-league-text">
+                                        <div class="text-center">
+                                            Giải cho phép đăng ký đến hết ngày
+                                            <span style="font-weight: 700;">{{ league.date_end.strftime("%d/%m/%Y") }}</span>
+                                        </div>
+                                        <div class="text-center">
+                                            Giải đấu yêu cầu số lượng cầu thủ tối thiểu của mỗi đội là
+                                            <span style="font-weight: 700;">{{ rule.min_player }}</span>
+                                            và tối đa của mỗi đội là
+                                            <span style="font-weight: 700;">{{ rule.max_player }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="mu-register-league-counter">
+                                        <div id="clock"></div>
+                                    </div>
+                                    {% if check_date %}
+                                    <div class="mu-register-league-modal">
+                                        {% if current_user.is_authenticated %}
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="mu-register-league-btn" data-toggle="modal" data-target="#exampleModal">
+                                            Đăng ký giải đấu
+                                        </button>
+                                        {% else %}
+                                        <button class="mu-register-league-btn">
+                                             <a href="{{ url_for('login', next=url_for('register_league', league_id=league.id)) }}">Đăng ký giải đấu</a>
+                                        </button>
+                                        {% endif %}
+
+                                        <!-- Modal -->
+                                        <form method="post">
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel" style="display: inline-block;">Đăng ký</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <label>Chọn đội bóng: </label>
+                                                            <select class="form-control" name="club_id" id="chose_club">
+                                                                <option value="0">
+                                                                    <a class="btn btn-success" href="{{ url_for('create_club',
+                                                                        next=url_for('register_league', league_id=league.id)) }}">Tạo đội mới</a>
+                                                                </option>
+                                                                {% for club in current_user.clubs %}
+                                                                    {% if club.id not in league_club %}
+                                                                    <option value="{{ club.id }}">
+                                                                        {{ club.name }} ({{ club.id|get_total_player_by_club_id }} cầu thủ)
+                                                                    </option>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                                            </select>
+                                                        </div>
+                                                        <div class="modal-footer" id="register_create">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                                            <a class="btn btn-success" href="{{ url_for('create_club',
+                                                                        next=url_for('register_league', league_id=league.id)) }}">Tạo đội mới</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block main %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block jquery %}
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.js"
+        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+        crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/countdown.js') }}"></script>
+<script>
+    $('#clock').countdown('{{ date_end }}', function(event) {
+        var $this = $(this).html(event.strftime(''
+            +'<div><span>%w</span><span>Tuần</span></div>'
+            +'<div><span>%d</span><span>Ngày</span></div>'
+            +'<div><span>%H</span><span>Giờ</span></div>'
+            +'<div><span>%M</span><span>Phút</span></div>'
+            +'<div><span>%S</span><span>Giây</span></div>'
+        ));
+    })
+
+    $("#chose_club").change(function() {
+        if ($("#chose_club").val() != 0) {
+            $("#register_create").html(
+                '<button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>' +
+                '<button type="submit" class="btn btn-success">Đăng ký</button>'
+            );
+        } else {
+            $("#register_create").html(
+                '<button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>' +
+                '<a class="btn btn-success" href="{{ url_for('create_club',
+                    next=url_for('register_league', league_id=league.id)) }}">Tạo đội mới</a>'
+            );
+        }
+    });
+</script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Bootstrap -->
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<!-- Slick slider -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/slick.min.js') }}"></script>
+<!-- Custom js -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
+{% endblock %}

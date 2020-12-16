@@ -1,0 +1,73 @@
+{% extends "base/base.html" %}
+
+{% block header %}
+	{{ super() }}
+{% endblock %}
+
+{% block style_header %}
+	class="mu-fixed-nav" style="background-color: #3fc35f;"
+{% endblock %}
+
+{% block slider %}
+{% endblock %}
+
+{% block main %}
+<section id="mu-my-club">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="mu-my-club-area">
+					<h2>Đội bóng của tôi</h2>
+					<a class="btn btn-primary" href="{{ url_for('create_club') }}">Tạo đội bóng</a>
+					{% if clubs %}
+					<div class="mu-clubs-area">
+						<div class="mu-clubs-group-card">
+							{% for c in clubs %}
+							<a href="{{ url_for('club_detail', club_id=c.id) }}" class="mu-clubs-card">
+								<img src="{{ url_for('static', filename='images/default_football_club.png') }}" />
+								<div class="mu-clubs-card-body">
+									<h4 class="text-center">{{ c.name }}</h4>
+									<p class="text-center">
+										{% for level in levels %}
+											{% if c.level_id == level.id %}
+											<span>{{ level.name }}</span> |
+											{% endif %}
+										{% endfor %}
+										{% for gender in genders %}
+											{% if c.gender_id == gender.id %}
+											<span>{{ gender.name }}</span>
+											{% endif %}
+										{% endfor %}
+									</p>
+									<p class="text-center"><i class="icon-people"></i> {{ c.players|length }} Thành viên</p>
+								</div>
+							</a>
+							{% endfor %}
+						</div>
+					</div>
+					{% else %}
+					<div class="mu-no-clubs-area">
+						<h5>Hiện tại bạn chưa có đội bóng nào !!!</h5>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block jquery %}
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Bootstrap -->
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<!-- Slick slider -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/slick.min.js') }}"></script>
+<!-- Custom js -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
+{% endblock %}

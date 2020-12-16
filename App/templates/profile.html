@@ -1,0 +1,75 @@
+{% extends "base/base.html" %}
+
+{% block header %}
+	{{ super() }}
+{% endblock %}
+
+{% block style_header %}
+	class="mu-fixed-nav" style="background-color: #3fc35f;"
+{% endblock %}
+
+{% block slider %}
+{% endblock %}
+
+{% block main %}
+<section id="mu-profile">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="mu-profile-area">
+					<h2>Thông tin của tôi</h2>
+					{% if msg %}
+					<div class="alert alert-success" role="alert">
+						<div class="text-center">{{ msg }}</div>
+					</div>
+					{% endif %}
+					<div class="mu-profile-content">
+						<div class="mu-profile-image">
+							<img src="{{ url_for('static', filename='images/default_user.png') }}">
+						</div>
+						<div class="mu-profile-form">
+							<form method="post">
+								<div class="form-group">
+									<label>Họ và tên</label>
+									<input type="text" class="form-control" name="name" value="{{ user.name }}" />
+								</div>
+								<div class="form-group">
+									<label>Số điện thoại</label>
+									<input type="text" class="form-control" maxlength="10" name="phone" value="{{ user.phone }}" />
+								</div>
+								<div class="form-group">
+									<label>Ngày sinh</label>
+									{% if user.birthday %}
+									<input type="date" class="form-control" name="birthday"
+										   value="{{ user.birthday.strftime('%Y-%m-%d') }}" />
+									{% else %}
+									<input type="date" class="form-control" name="birthday" />
+									{% endif %}
+								</div>
+								<div class="form-group">
+									<button type="submit">Lưu thông tin</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block jquery %}
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Bootstrap -->
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<!-- Slick slider -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/slick.min.js') }}"></script>
+<!-- Custom js -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
+{% endblock %}
